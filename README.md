@@ -1,10 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
-# 
-
----
-
-# Description
 
 기저선 변동 잡음 제거와 딥러닝을 이용한 심전도 QT 간격 예측 소프트웨어
 
