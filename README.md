@@ -1,6 +1,6 @@
 # 기저선 변동 잡음 제거와 딥러닝을 이용한 심전도 QT 간격 예측
 
-```markdown
+
 # 기저선 변동 잡음 제거와 딥러닝을 이용한 심전도 QT 간격 예측
 
 이 저장소는 기저선 변동 잡음 제거와 CNN-BiLSTM 하이브리드 딥러닝 모델을 활용하여 심전도 신호의 QT 간격을 예측하는 소프트웨어를 제공합니다.
@@ -19,7 +19,7 @@
 필요한 패키지는 `requirements.txt` 파일을 참고하세요.
 
 ## 파일 구조
-```
+
 
 .
 ├── requirements.txt    \# 의존성 패키지 목록
@@ -31,41 +31,41 @@
 ├── valid.pkl           \# 검증 데이터셋
 └── test.pkl            \# 테스트 데이터셋
 
-```
+
 
 ## 사용 방법
 
 ### 1. 환경 설정
 필요한 패키지를 설치합니다:
-```
+
 
 pip install -r requirements.txt
 
-```
+
 
 ### 2. 데이터 생성
 다음 명령어를 실행하여 원본 QT 데이터를 전처리하고, train/valid/test 데이터를 생성합니다:
-```
+
 
 python qt_generator.py --input_dir ./qt-database --output_dir ./processed_data
 
-```
+
 
 ### 3. 모델 학습
 다음 명령어를 실행하여 CNN-BiLSTM 모델을 학습합니다:
-```
+
 
 python qt_detector.py --data_dir ./processed_data --epochs 100 --batch_size 32
 
-```
+
 
 ### 4. 모델 평가
 학습된 모델(`model.h5`)을 테스트 데이터로 평가합니다:
-```
+
 
 python qt_detector.py --evaluate --model_path ./model.h5 --test_data ./processed_data/test.pkl
 
-```
+
 
 ## 성능
 
